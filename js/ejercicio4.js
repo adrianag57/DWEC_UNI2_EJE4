@@ -1,16 +1,14 @@
-/*
-    Ejercicio propuesto en las transparencias sobre el método fill
-*/
+function transformarATipos(cosas) {
 
-const size = 50;
-const defaultValue = 0;
+    let respuesta = [];
 
-//FORMA MANUAL
-let arrManual=new Array(size);
-for (let i=0;i<arrManual.length;i++)
-   arrManual[i]=defaultValue;
-console.log(arrManual);
+    for (let i = 0; i < cosas.length; i++) {
 
-//FORMA "PRO"
-let arrPro = new Array(size).fill(defaultValue);
-console.log(arrPro);// [0, 0, 0, ... ,0, 0]
+        respuesta[i] = typeof cosas[i];
+    }
+
+    return respuesta;
+}
+
+console.log(transformarATipos([1, "casa", {}])); 
+console.log(transformarATipos([function() { }, true]));
